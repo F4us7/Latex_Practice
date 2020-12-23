@@ -1,0 +1,278 @@
+% ---------------------------- Task 1 ----------------------------------
+\subsection*{\center Question \#1.}
+{\bf Conditions:~}
+Consider the sequence $a_n=\dfrac{7n-1}{n+1}$ and the value $c=7$. 
+Prove that $\lim\limits_{n\rightarrow\infty}a_n=c$. 
+More precisely, $\forall\eps>0$ find the minimum value $N=N(\eps)$ such that $\left|a_n-c\right|<\eps,\ \forall n>N(\eps)$.
+Fill in the following table.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & & & \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Solution:~}
+If $c$ is the limit of $a_n$, then $\forall\eps>0$ and $\forall n>N(\eps)$, $\left|a_n-c\right|<\eps$ must hold true.
+By substituting the values for $a_n$ and $c$ into the above inequality we achieve the following:
+$$\left|\dfrac{7n-1}{n+1}-7\right|<\eps.$$
+Next we open the modulus to form a double inequality and rewrite the difference to have a common denominator.
+$$-\eps<\dfrac{-8}{n+1}<\eps.$$
+Obviously, the right inequality holds true $\forall n \in \mathbb{N}$, therefore form this point on we will only consider the left inequality:
+$$-\eps<\dfrac{-8}{n+1}.$$
+At this point, by performing a series of transformations we can isolate $n$ and formulate a formula for $N(\eps)$.
+$$
+\begin{array}{c}
+-\eps<\dfrac{-8}{n+1},\\ [12pt]
+\eps>\dfrac{8}{n+1},\\ [12pt]
+n+1>\dfrac{8}{\eps},\\ [12pt]
+n>\dfrac{8}{\eps}-1,\\ [12pt]
+N(\eps)=\left\lfloor\dfrac{8}{\eps}-1\right\rfloor.
+\end{array}
+$$
+Where $\lfloor\ \ \rfloor$ {} is the floor function.\\
+The existence of a $N=N(\eps)$ function proves that $\left|a_n-c\right|<\eps$ holds true for $\forall\eps>0$ and $\forall n>N(\eps) \iff \lim\limits_{n\rightarrow\infty}a_n=c$. We may fill in the table:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & 79 & 799  &  7999 \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Verification:}
+$$
+\begin{array}{l}
+\left|a_{80}-c\right|=\dfrac{-8}{81}<0.1,  \\[12pt]
+\left|a_{800}-c\right|=\dfrac{-8}{801}<0.01,  \\[12pt]
+\left|a_{8000}-c\right|=\dfrac{-8}{8001}<0.001.
+\end{array}
+$$
+
+% ---------------------------- Task 2 ----------------------------------
+\subsection*{\center Question \#2.}
+{\bf Conditions:~} 
+Evaluate the limits of the following functions:
+$$
+\begin{array}{cc}
+\text{\bf(a)} & \lim\limits_{x\rightarrow-1}\dfrac{x^3-3x-2}{x^2-x-2}, \\[12pt]
+\text{\bf(b)} & \lim\limits_{x\rightarrow+\infty}\dfrac{1-\sqrt[3]{4x^4-x^7\sqrt{x}}}{2x^2-3x+5}, \\[12pt]
+\text{\bf(c)} & \lim\limits_{x\rightarrow3}\dfrac{\sqrt{x+13}-2\sqrt{x+1}}{x^2-9}, \\[12pt]
+\text{\bf(d)} & \lim\limits_{x\rightarrow0}({2-\cos{3x}})^{\frac{1}{\ln{(1+x^2)}}}, \\[12pt]
+\text{\bf(e)} & \lim\limits_{x\rightarrow0}{\left(\dfrac{\sin{2x}}{\arcsin{3x}}\right)}^{\arccot x}, \\[12pt]
+\text{\bf(f)} & \lim\limits_{x\rightarrow2}\dfrac{\lg{(5-2x)}}{\sqrt{10-3x}-2}.
+\end{array}
+$$
+{\bf Solutions:}\\
+{\bf\flushleft (a)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow-1}\dfrac{x^3-3x-2}{x^2-x-2}= 
+\left[\dfrac{0}{0}\right] = 
+\lim\limits_{x\rightarrow-1}\dfrac{(x+1)(x^2-x-2)}{x^2-x-2} = \lim\limits_{x\rightarrow-1}(x+1) = 0.
+\end{array}
+$$
+\vspace{0.2cm}
+{\bf\flushleft (b)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow+\infty}\dfrac{1-\sqrt[3]{4x^4-x^7\sqrt{x}}}{2x^2-3x+5} =
+\left[\dfrac{1-\sqrt[3]{\infty-\infty}}{\infty-\infty}\right] =
+\lim\limits_{x\rightarrow+\infty}\dfrac{1-x^{5/2}\cdot\sqrt[3]{4x^{-7/2}-1}}{x^2\cdot(2-3x^{-1}+5x^{-2})} = \\ [15pt]
+\lim\limits_{x\rightarrow+\infty}\dfrac{x^{5/2}\cdot(x^{-5/2}-\sqrt[3]{4x^{-7/2}-1})}{x^2\cdot(2-3x^{-1}+5x^{-2})} =
+\lim\limits_{x\rightarrow+\infty}\sqrt{x}\cdot\dfrac{x^{-5/2}-\sqrt[3]{4x^{-7/2}-1}}{2-3x^{-1}+5x^{-2}} = +\infty.
+\end{array}
+$$
+\vspace{0.2cm}
+{\bf\flushleft (c)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow3}\dfrac{\sqrt{x+13}-2\sqrt{x+1}}{x^2-9} =
+\left[\dfrac{0}{0}\right] =
+\lim\limits_{x\rightarrow3}\dfrac{(x+13)-4(x+1)}{(x^2-9)(\sqrt{x+13}+2\sqrt{x+1})} = \\ [15pt]
+\lim\limits_{x\rightarrow3}\dfrac{-3x+9}{(x-3)(x+3)(\sqrt{x+13}+2\sqrt{x+1})} =
+\lim\limits_{x\rightarrow3}\dfrac{-3}{(x+3)(\sqrt{x+13}+2\sqrt{x+1})} = -\dfrac{1}{16}.
+\end{array}
+$$
+\newpage
+{\bf\flushleft (d)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow0}({2-\cos{3x}})^{\frac{1}{\ln{(1+x^2)}}} =
+\left[1^{\infty}\right] =
+\lim\limits_{x\rightarrow0}\exp\left(\dfrac{\ln(2-\cos{3x})}{\ln{(1+x^2)}}\right) =
+\left|\begin{array}{l}
+\ln(2-\cos{3x})\sim 1-\cos{3x} \\
+\ln(1+x^2)\sim x^2
+\end{array}\right| = \\[16pt]
+\exp\left(\lim\limits_{x\rightarrow0}\dfrac{1-\cos{3x}}{x^2}\right) = 
+\left|\begin{array}{l}
+1-\cos{3x}\sim \dfrac{(3x)^2}{2}
+\end{array}\right| = 
+\exp\left(\lim\limits_{x\rightarrow0}\dfrac{9x^2}{2x^2}\right) =
+e^{\frac{9}{2}} = (\sqrt{e})^9.
+\end{array}
+$$
+\vspace{0.2cm}
+{\bf\flushleft (e)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow0}{\left(\dfrac{\sin{2x}}{\arcsin{3x}}\right)}^{\arccot x} =
+\left[\left(\dfrac{0}{0}\right)^{\frac{\pi}{2}}\right] =
+\left|\begin{array}{l}
+\sin{2x}\sim 2x \\
+\arcsin{3x}\sim 3x
+\end{array}\right| =
+\left(\dfrac{2}{3}\right)^{\lim\limits_{x\rightarrow0}\arccot x} =
+\left(\dfrac{2}{3}\right)^{\pi/2}.
+\end{array}
+$$
+\vspace{0.2cm}
+{\bf\flushleft (f)}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow2}\dfrac{\lg{(5-2x)}}{\sqrt{10-3x}-2} =
+\left[\dfrac{0}{0}\right] =
+\left|\begin{array}{l}
+t=x-2 \\
+t\rightarrow0
+\end{array}\right| =
+\lim\limits_{t\rightarrow0}\dfrac{\lg{(1-2t)}}{\sqrt{4-3t}-2} =
+\lim\limits_{t\rightarrow0}\ \dfrac{\lg{(1-2t)}}{2\cdot\sqrt{1-\frac{3t}{4}}-2} = \\ [15pt]
+\left|\begin{array}{l}
+\lg{(1-2t)}\sim \dfrac{-2t}{\ln{10}} \\ [10pt]
+\sqrt{1-\frac{3t}{4}}-1\sim \dfrac{1}{2}\cdot\dfrac{-3t}{4}
+\end{array}\right| =
+\dfrac{1}{2\ln{10}}\cdot\lim\limits_{t\rightarrow0}\dfrac{16t}{3t} = \dfrac{8}{3\ln{10}}.
+\end{array}
+$$
+
+% ---------------------------- Task 3 ----------------------------------
+\subsection*{\center Question \#3.}
+{\bf Conditions:}\\
+(a) Show that the given functions $f(x)=x^2+\sqrt{x}+\sin{x}$ and $g(x)=\ln{\cos{\sqrt{x}}}$ are infinitely-large or infinitely-small functions as $x\rightarrow0+$;\\
+(b) For both functions find their main part (equivalent function in the form $C(x-x_0)^\alpha$ if $x\rightarrow x_0$ or $C(x)^\alpha$ if $x\rightarrow\infty$), state their asymptotic orders of growth;\\
+(c) Compare the functions $f(x)$ and $g(x)$ as $x\rightarrow0+$.\\ [0.5cm]
+{\bf Solutions:}
+{\bf\flushleft (a)}
+To show that the given are functions are infinitely-small as $x\rightarrow0+$ we should evaluate their limits with the given tendency of the argument $x$:
+$$
+\begin{array}{c}
+\lim\limits_{x\rightarrow0+}f(x) = 
+\lim\limits_{x\rightarrow0+}(x^2+\sqrt{x}+\sin{x}) =
+\left[0+0+0\right] = 0. \\ [13pt]
+\lim\limits_{x\rightarrow0+}g(x) = 
+\lim\limits_{x\rightarrow0+}\ln{\cos{\sqrt{x}}} =
+\left[\ln{\cos{0}}\right] = 
+\left[\ln{1}\right] = 0.
+\end{array}
+$$
+\newpage
+{\bf\flushleft (b)}
+The functions $f(x)$ and $g(x)$ are infinitely-small as $x\rightarrow0+$, therefore their main parts have the form of $C(x)^\alpha$, and may be found using asymptotically equivalent functions.
+$$
+\begin{array}{c}
+\sin{x}\sim x,\ \text{as}\ x\rightarrow{0+} \implies
+f(x)=x^2+\sqrt{x}+\sin{x}\ \sim\ x^2+\sqrt{x}+x, \\
+\because \text{ an infinitely-small polynomial is equivalent to its monomial of the lowest power:} \\
+x^2+\sqrt{x}+x\ \sim\ \sqrt{x}=x^{(1/2)}, \\
+\therefore\ f(x)=x^2+\sqrt{x}+\sin{x}\ \sim\ x^{(1/2)}.\\ [0.4cm]
+1-\cos{x}\sim \dfrac{x^2}{2},\ \text{as}\ x\rightarrow{0+} \implies
+g(x)=\ln{\cos{\sqrt{x}}}=\ln{(1+(\cos{\sqrt{x}}-1))}\ \sim\ \ln{(1-\dfrac{x}{2})},\\
+\ln{(1+x)}\sim x,\ \text{as}\ x\rightarrow{0+} \implies
+\ln{(1-\dfrac{x}{2})}\sim -\dfrac{x}{2}, \\
+\therefore\ g(x)=\ln{\cos{\sqrt{x}}}\ \sim\ -\dfrac{x}{2}.
+\end{array}
+$$
+Consequently, as $x\rightarrow0+$, the main part of $f(x)$ is $1(x)^{1/2}$ and the main part of $g(x)$ is $-\dfrac{1}{2}(x)^1$.
+{\bf\flushleft (c)} To compare $f(x)$ and $g(x)$ as $x\rightarrow0+$, we should consider the limit of the relation between the main parts of $f(x)$ and $g(x)$:
+$$
+\lim\limits_{x\rightarrow0+}\dfrac{g(x)}{f(x)} = 
+\lim\limits_{x\rightarrow0+}\dfrac{-(1/2)x}{\sqrt{x}} =
+-\dfrac{1}{2}\cdot\lim\limits_{x\rightarrow0+}x^{\frac{1}{2}} = 0. \\
+$$
+$\therefore$\ $g(x)$ is infinitely-small relative to $f(x)$, as $x\rightarrow0+$. In Bachmann-Landau notation this may be represented as $g(x)=o(f(x))$.\\ [10pt]
+Moreover, it is possible to calculate the exact asymptotic order of growth of one function against the other as $x\rightarrow0+$. Let us consider the following relation
+$$
+\lim\limits_{x\rightarrow0+}\dfrac{g(x)}{(f(x))^\alpha} = C,
+$$
+where $\alpha$ is the asymptotic order of growth of g(x) relative to f(x) and $C$ is a constant.
+$$
+\begin{array}{c}
+\lim\limits_{x\rightarrow0+}\dfrac{g(x)}{(f(x))^\alpha} = C,\\ [14pt]
+\lim\limits_{x\rightarrow0+}\dfrac{-(1/2)x}{(\sqrt{x})^\alpha} = C,\\ [12pt]
+-\dfrac{1}{2}\cdot\lim\limits_{x\rightarrow0+}\dfrac{x}{x^{\frac{\alpha}{2}}} = C, \\ [10pt]
+\therefore\ \alpha=2.
+\end{array}
+$$
+
+% ---------------------------- Task 4 ----------------------------------
+\newpage
+\subsection*{\center Question \#4.}
+{\bf Conditions:~}
+Find the points of discontinuity of the function $y=f(x)$ and state their class. Plot the graph of $f(x)$ in the neighborhood of each point of discontinuity.
+$$
+f(x) \equiv 
+\begin{cases}
+\cos{\left(\dfrac{\pi x}{2}\right)},	& |x|\leqslant1, \\
+|x-1|,   & |x|>1.
+\end{cases}
+$$
+{\bf Solution:}
+Both $\cos{\left(\dfrac{\pi x}{2}\right)}$ and $|x-1|$ are continuous functions on $\mathbb{R}$, therefore a discontinuity may only occur in the points $x_1=-1$ and $x_2=1$. As such, we should evaluate the one-sided limits of $f(x)$ in these two points:
+$$
+\begin{array}{c}
+\lim\limits_{x\rightarrow(-1)-}f(x) = 
+\lim\limits_{x\rightarrow(-1)-}|x-1| = 2, \qquad
+\lim\limits_{x\rightarrow(-1)+}f(x) = 
+\lim\limits_{x\rightarrow(-1)+}\cos{\left(\dfrac{\pi x}{2}\right)} = 0, \\[12pt]
+\therefore\text{ Both limits exist and are finite, yet }\lim\limits_{x\rightarrow(-1)-}f(x)\neq \lim\limits_{x\rightarrow(-1)+}f(x), \\
+\implies x_1=-1, \text{ is a point of jump discontinuity.} \\[16pt]
+\lim\limits_{x\rightarrow1-}f(x) = 
+\lim\limits_{x\rightarrow1-}\cos{\left(\dfrac{\pi x}{2}\right)} = 0, \qquad
+\lim\limits_{x\rightarrow1+}f(x) = 
+\lim\limits_{x\rightarrow1+}|x-1| = 0, \\
+\therefore\text{ Both limits exist, are finite and are equal to 0,} \\
+\implies x_2=1, \text{ is not a point of discontinuity.} \\[15pt]
+\end{array}
+$$
+Knowing the points of discontinuity and their classification, it is possible to plot the graph of $f(x)$ in the neighborhood of the points of discontinuity:
+\vspace{0.2cm}
+\begin{center}
+	\begin{tikzpicture}
+	\def\outerfunc{}
+	\begin{axis}[xmin=-5.0,
+	xmax=5.0, 
+	ymin=-0.8,
+	ymax=4.5,
+	width=\textwidth,
+	height=0.61\textwidth,
+	axis x line=middle,
+	axis y line=middle, 
+	every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+	every inner x axis line/.append style={|-latex'},
+	every inner y axis line/.append style={|-latex'},
+	minor tick num=1,			
+	axis equal=true,
+	xlabel=$x$, 
+	ylabel=$y$,          
+	samples=800,
+	clip=true,
+	]
+	\addplot[color=black, line width=1.4pt,domain=-5:-1] {-\x+1};
+	\addplot[color=black, line width=1.4pt,domain=-1:1]{cos(deg((\x*pi)/2))};
+	\addplot[color=black, line width=1.4pt,domain=1:5]{\x-1};
+	\addplot[
+	mark=*,
+	mark options={fill=black, draw=black},
+	] coordinates {(-1, 0) (1, 0)};
+	\addplot[
+	mark=*,
+	mark options={fill=white, draw=black},
+	] coordinates {(-1, 2)};
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
