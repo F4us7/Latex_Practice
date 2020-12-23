@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{pbox}
+\usepackage{tikz, tkz-fct, pgfplots}
+\usetikzlibrary{arrows}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm
+} 
+\usepackage[labelsep=period]{caption}
+
+
+% ----------------- Commands -----------------
+\renewcommand{\baselinestretch}{1.3}
+\newcommand{\eps}{\varepsilon}
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+\DeclareMathOperator{\arccot}{arccot}
+
+
+% ----------------- Main Document -----------------
+\begin{document}
+\input{src/title_page.tex}
+
+\newpage	
+\tableofcontents
+
+\newpage
+\pagestyle{plain}
+\section{Goals and objectives of the coursework}	
+\subsection{Goals}
+--- development of capabilities necessary for future professional activity and auxiliary for the successful completion of the baccalaureate course.
+
+\subsection{Objectives}
+\begin{enumerate}
+\item Development of familiarity with the software necessary for future professional activity.
+\item Development of the ability to research required information in specialised literature and other sources.
+\item Development of the skills needed to formulate reports and present results.
+\end{enumerate}
+
+\subsection{Individual objectives}	
+\begin{enumerate}
+\item Examine the methods used to display mathematical information in the \LaTeX {} typesetting system.  
+\item Examine the possibilities and potential of the Git version control system.
+\item Learn to typeset texts with mathematical context, containing formulas and graphs, in the \LaTeX {} system. For this, complete the installation of the open-source distributive TeXLive and compiler TeXStudio.
+\item Recreate in the \LaTeX {} system your variant of the sample calculations from the Mathematical Analysis course.
+\item Register on the online platform GitHub and upload the initial tex-files and the results of their compilation (in pdf format).  
+\end{enumerate} 
+
+\newpage
+\section{Report}
+The relevance of this topic is dictated by the fundamental necessity of the ability to operate the typesetting systems of \LaTeX {} and TexStudio for the ultimate scope of displaying text, mathematical formulae and graphs. The skills acquired through the completion of this coursework may be applied in such processes as the writing of course projects, thesis work and future professional activity.
+
+Moreover, the \LaTeX {} typesetting system allows for the usage of a large number of external instrumental packages, which greatly facilitate the process of displaying information in various fields of engineering, technical and scientific activity.
+\newpage
+\section{Individual objectives}
+
+\subsection{Limits and Continuity.}
+\input{src/Task2.tex}
+
+\newpage
+\addcontentsline{toc}{section}{Bibliography}
+\begin{thebibliography}{3}
+\bibitem{book01} L'vovsky S.M. Typesetting and layout in the \LaTeX\ system, 2003 c.
+\bibitem{website1} \LaTeX\ Base Reference, https://docs.latexbase.com/, 2020.
+\bibitem{website2} \LaTeXe\ Cheat Sheet, https://wch.github.io/latexsheet/latexsheet.pdf, 2014.
+\end{thebibliography}
+
+\end{document}
